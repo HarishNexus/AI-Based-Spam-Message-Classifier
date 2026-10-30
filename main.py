@@ -67,3 +67,13 @@ result = model.predict(new_message)[0]
 
 print("Message:", new_message[0])
 print("Prediction:", result)
+# User input
+while True:
+    new_message = input("\nEnter a message (or exit): ")
+
+    if new_message.lower() == "exit":
+        break
+
+    result = model.predict([new_message])[0]
+
+    print("Prediction:", result)
